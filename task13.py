@@ -8,16 +8,17 @@
 # Input: 6 -> -20 30 -40 50 10 -10
 # Output: 2
 
-n = int(input())
-s = list(input().split(' '))
-j=0
-k=0
-for i in range(n):
-    a = int(s[i])
-    if a>0:
-        j=j+1
+import random
+n = int(input('Введите число дней: '))
+count = max_count = 0
+for _ in range(n):
+    val = random.randint(-5, 50)
+    print(val, end=', ')
+    if val > 0:
+        count += 1
     else:
-        j=0
-    if j>k:
-        k=j
-print(k)
+        count = 0
+    if count>max_count:
+        max_count = count
+        
+print(f'Максимальное число дней с оттепелью {max_count}')        

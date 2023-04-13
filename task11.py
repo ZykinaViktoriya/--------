@@ -3,18 +3,14 @@
 # выведите такое число n, что φ(n)=A. Если А не
 # является числом Фибоначчи, выведите число -1.
 # 5->6
+n = int(input('Введите число: '))
+f1, f2 = 0, 1
+i = 1
+while n > f1:
+    f1, f2 = f2, f1 + f2 
+    i += 1
 
-n = int(input())
-s = 0
-s1 = 1
-s2 = 1
-while s1 < n or s2 < n:
-    s1 = s1 + s2
-    s2 = s1 + s2
-    s += 2
-if s1 == n:
-        s = s + 1
-if n + s1 == s2 or n + s2 == s1 or s1 == n:
-    print(s)
+if n == f1:
+    print(n, '->', i)
 else:
-    print(-1)
+    print(-1)    

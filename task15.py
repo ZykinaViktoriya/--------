@@ -6,14 +6,23 @@
 # Input: 5 -> 5 1 6 5 9
 # Output: 1 9
 
-n = int(input())
+import random
+n = int(input('Введите количество арбузов: '))
+lst = [random.randint(1, 20) for _ in range(n)]
+print(lst, end='')  
+print('\n', min(lst),max(lst))
 
-if n < 2 :
 
-  print('Ooops!')
+# import random
+# n = int(input("Введите число: "))
+# max_val, min_val = 1, 20
 
-else:
-
-  list = list(map(int,input().split()))
-
-  print(min(list),max(list))
+# for _ in range(n):
+#     val = random.randint(1, 20)
+#     print(val, end=" ")
+#     if max_val < val:
+#         max_val = val
+#     if min_val > val:
+#         min_val = val
+    
+# print (f"Максимальный вес {max_val}, минимальный вес {min_val}")
