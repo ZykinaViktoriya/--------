@@ -2,3 +2,14 @@
 # Напоминание: Простое число - это число, которое имеет 2 делителя: 1 и n(само число)
 # Input: 5
 # Output: yes
+
+
+a = int(input("Введите число: "))
+for i in range(2, a // 2 + 1):
+    if a % i == 0:
+        print("no")
+        break    
+else:
+    print("yes") 
+
+      
